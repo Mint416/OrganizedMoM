@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "tools": [
+    "check_family_schedule",
+    "get_case",
+    "list_pending_tasks"
+  ],
+  "observed_overlap_minutes": 60,
+  "external_actions": 0
+}

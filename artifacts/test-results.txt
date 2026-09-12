@@ -1,0 +1,46 @@
+test_csrf_and_origin (test_core.APITests.test_csrf_and_origin) ... ok
+test_full_workflow (test_core.APITests.test_full_workflow) ... ok
+test_home_and_assets (test_core.APITests.test_home_and_assets) ... ok
+test_host_rebinding (test_core.APITests.test_host_rebinding) ... ok
+test_ambiguous_child (test_core.CoreTests.test_ambiguous_child) ... ok
+test_approval_cannot_cover_changed_content (test_core.CoreTests.test_approval_cannot_cover_changed_content) ... ok
+test_approval_expires (test_core.CoreTests.test_approval_expires) ... ok
+test_approved_write_is_verified_and_single_use (test_core.CoreTests.test_approved_write_is_verified_and_single_use) ... ok
+test_beam_bounded (test_core.CoreTests.test_beam_bounded) ... ok
+test_cancelled_latest_revision_hides_previous (test_core.CoreTests.test_cancelled_latest_revision_hides_previous) ... ok
+test_college_requires_student_and_parent_review (test_core.CoreTests.test_college_requires_student_and_parent_review) ... ok
+test_completion_suppresses_reminder (test_core.CoreTests.test_completion_suppresses_reminder) ... ok
+test_concurrent_execution_only_once (test_core.CoreTests.test_concurrent_execution_only_once) ... ok
+test_confirmed_makeup_selected (test_core.CoreTests.test_confirmed_makeup_selected) ... ok
+test_failure_is_not_no_conflict (test_core.CoreTests.test_failure_is_not_no_conflict) ... ok
+test_live_send_requires_explicit_consent (test_core.CoreTests.test_live_send_requires_explicit_consent) ... ok
+test_memory_survives_restart (test_core.CoreTests.test_memory_survives_restart) ... ok
+test_new_source_invalidates_approval (test_core.CoreTests.test_new_source_invalidates_approval) ... ok
+test_no_approval_no_effect (test_core.CoreTests.test_no_approval_no_effect) ... ok
+test_notification_deduplication (test_core.CoreTests.test_notification_deduplication) ... ok
+test_prompt_injection_cannot_authorize_actions (test_core.CoreTests.test_prompt_injection_cannot_authorize_actions) ... ok
+test_quiet_hours (test_core.CoreTests.test_quiet_hours) ... ok
+test_reflection_does_not_modify_rules (test_core.CoreTests.test_reflection_does_not_modify_rules) ... ok
+test_retrieval_and_revision (test_core.CoreTests.test_retrieval_and_revision) ... ok
+test_routine_bypasses_planner (test_core.CoreTests.test_routine_bypasses_planner) ... ok
+test_sensitive_notice_stays_private (test_core.CoreTests.test_sensitive_notice_stays_private) ... ok
+test_shared_driver_travel (test_core.CoreTests.test_shared_driver_travel) ... ok
+test_source_disagreement (test_core.CoreTests.test_source_disagreement) ... ok
+test_timezone_validation (test_core.CoreTests.test_timezone_validation) ... ok
+test_touching_events_same_location_do_not_overlap (test_core.CoreTests.test_touching_events_same_location_do_not_overlap) ... ok
+test_tournament_never_skipped (test_core.CoreTests.test_tournament_never_skipped) ... ok
+test_unknown_makeup_remains_pending (test_core.CoreTests.test_unknown_makeup_remains_pending) ... ok
+test_model_disabled_by_default (test_extensions.ExtensionsTests.test_model_disabled_by_default) ... ok
+test_model_tool_loop_uses_read_only_context (test_extensions.ExtensionsTests.test_model_tool_loop_uses_read_only_context) ... ok
+test_notification_revalidates_source_snapshot (test_extensions.ExtensionsTests.test_notification_revalidates_source_snapshot) ... ok
+test_refresh_timestamp_does_not_duplicate_alert (test_extensions.ExtensionsTests.test_refresh_timestamp_does_not_duplicate_alert) ... ok
+test_snooze_defers_then_releases_once (test_extensions.ExtensionsTests.test_snooze_defers_then_releases_once) ... ok
+test_telegram_response_checks_destination (test_extensions.ExtensionsTests.test_telegram_response_checks_destination) ... ok
+test_telegram_timeout_is_unknown_and_not_blindly_retried (test_extensions.ExtensionsTests.test_telegram_timeout_is_unknown_and_not_blindly_retried) ... ok
+test_worker_creates_one_sunday_reflection (test_extensions.ExtensionsTests.test_worker_creates_one_sunday_reflection) ... ok
+test_worker_handles_failed_source (test_extensions.ExtensionsTests.test_worker_handles_failed_source) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 0.288s
+
+OK

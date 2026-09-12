@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Organized Mom · A little more breathing room</title>
+  <link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script>
+</head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="/" aria-label="The Organized Mom home"><span class="brand-mark">m</span><span>the organized<br><strong>mom.</strong></span></a>
+  <div class="family-label">YOUR FAMILY SPACE</div>
+  <nav aria-label="Main navigation">
+    <button class="nav active" data-tab="today"><span>◷</span> Family overview</button>
+    <button class="nav" data-tab="sources"><span>▤</span> Sources & evidence</button>
+    <button class="nav" data-tab="decisions"><span>◇</span> Decisions</button>
+    <button class="nav" data-tab="memory"><span>✓</span> Tasks & memory</button>
+    <button class="nav" data-tab="reflection"><span>↻</span> Weekly reflection</button>
+    <button class="nav" data-tab="settings"><span>⚙</span> Connections</button>
+  </nav>
+  <div class="sidebar-note"><span class="dot"></span> A thoughtful helping hand<p>You choose the commitments.<br>Your assistant keeps track.</p></div>
+  <div class="profile"><span class="avatar">MT</span><div>Min's family space<small>Synthetic demonstration</small></div></div>
+</aside>
+<main>
+  <header class="topbar"><span>FAMILY / <b id="page-label">OVERVIEW</b></span><span class="demo-pill">DEMO · NO REAL ACCOUNTS</span></header>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <section id="today" class="page">
+    <div class="heading"><div><div class="eyebrow">A LITTLE MORE BREATHING ROOM</div><h1>Everything in its place.</h1><p>A clearer view of your family's plans, and a little less to remember.</p></div><div class="date-stamp">THURSDAY<strong>13</strong>AUGUST 2026<span>Fixed demo date</span></div></div>
+    <div class="demo-control"><label for="scenario">Try a family moment</label><select id="scenario"></select><button id="load-scenario" class="secondary">Load scenario</button></div>
+    <div class="overview-grid">
+      <section class="card assistant-card"><div class="section-top"><span class="eyebrow">YOUR FAMILY ASSISTANT</span><span class="small-badge">SOURCE-BACKED</span></div><h2>Let's make the week work.</h2><p>Ask about a schedule change, a potential conflict, or an upcoming milestone.</p><form id="ask-form"><label class="sr-only" for="query">Ask your family assistant</label><textarea id="query" rows="3">Did BYGA change soccer this week, and does it conflict with LingoAce Chinese class?</textarea><div class="form-bottom"><span>Checks current records before suggesting a plan</span><button class="primary" id="ask-button" type="submit">Check my family's plans <span>↗</span></button></div></form><div class="suggestions"><button data-query="What needs preparing for the family schedule?">What should we prepare?</button><button data-query="Are there transportation conflicts?">Check transportation</button></div></section>
+      <section class="card small-card"><span class="eyebrow">YOU'RE IN CONTROL</span><div class="control-icon">✓</div><h2>Helpful by design.<br>Careful with changes.</h2><p>Every calendar change starts with an exact preview and your approval.</p><div class="rule-line"><span class="dot"></span> External calendar & email writes off</div><div class="rule-line"><span class="dot"></span> Source failures stay visible</div></section>
+    </div>
+    <div id="case-result"></div>
+    <div class="section-title"><div><span class="eyebrow">THE WEEK AT A GLANCE</span><h2>On the family calendar</h2></div><span class="muted">Synthetic records · Pacific time</span></div>
+    <div id="agenda" class="agenda"></div>
+    <div class="section-title"><div><span class="eyebrow">A SMALL TEAM, A SHARED PURPOSE</span><h2>Six roles behind your assistant</h2></div><span class="muted">Deterministic demo · optional model review</span></div><div id="roles" class="roles"></div>
+  </section>
+  <section id="sources" class="page" hidden><div class="heading"><div><div class="eyebrow">KNOW WHERE IT CAME FROM</div><h1>Sources & evidence.</h1><p>Current facts, earlier updates, and checks that still need attention.</p></div></div><div id="source-list"></div><details class="card import"><summary>Import or correct a structured record</summary><p>Paste a record following <code>data/sample-record.json</code>. Include the source ID, child, timezone-aware dates, revision, and status.</p><label for="record-json">Record JSON</label><textarea id="record-json" rows="9" placeholder='{"id": "MANUAL-001", ...}'></textarea><button class="primary" id="import-record">Save record</button></details></section>
+  <section id="decisions" class="page" hidden><div class="heading"><div><div class="eyebrow">THOUGHTFUL OPTIONS. YOUR DECISION.</div><h1>A plan you can review.</h1><p>Compare the alternatives, see the guardrails, and approve an exact local demonstration action.</p></div></div><div id="decision-list"></div><div class="section-title"><h2>Action history</h2></div><div id="action-list"></div></section>
+  <section id="memory" class="page" hidden><div class="heading"><div><div class="eyebrow">LESS TO KEEP IN YOUR HEAD</div><h1>Remembered & followed up.</h1><p>Feedback stays saved between visits. Completed tasks suppress further reminders.</p></div></div><h2>Family tasks</h2><div id="task-list"></div><h2>Notification outbox</h2><div id="notification-list"></div><h2>Saved local calendar changes</h2><div id="calendar-list"></div><details class="card"><summary>View the audit trail</summary><div id="audit-list"></div></details><a class="secondary download" href="/api/export" download="organized-mom-demo-trace.json">Download evidence JSON</a></section>
+  <section id="reflection" class="page" hidden><div class="heading"><div><div class="eyebrow">MAKE ROOM FOR NEXT WEEK</div><h1>A moment to reflect.</h1><p>Review verified outcomes and unresolved questions from the past seven days.</p></div><button class="primary" id="reflect">Create weekly reflection</button></div><div id="reflection-list"></div><div class="card"><h2>Your family rules stay yours.</h2><p>Reflection can suggest an improvement. It cannot change hard rules, approve an action, or claim that a simulated message was delivered to Telegram.</p></div></section>
+  <section id="settings" class="page" hidden><div class="heading"><div><div class="eyebrow">START SMALL. CONNECT WHEN READY.</div><h1>Your connections.</h1><p>The first version runs entirely with synthetic records. Account setup comes next.</p></div></div><div id="connection-list"></div><div class="card"><h2>About this demonstration</h2><p>The app replays the August 13, 2026 BYGA/LingoAce example from your Module 3 plan. It uses six Python specialist roles, TF-IDF and latent semantic retrieval, deterministic scheduling checks, bounded beam search, and SQLite memory.</p><p>It runs locally on your Mac. No website passwords are collected. Real Gmail and calendar access uses a separate read-only OAuth setup. External calendar updates and email replies are disabled.</p><p>See the GitHub-ready project plan and integration guide in the project folder for the next stages.</p></div></section>
+</main>
+<dialog id="approval-dialog"><form method="dialog"><button class="close" aria-label="Close approval preview">×</button></form><span class="eyebrow">EXACT ACTION PREVIEW</span><h2>You have the final say.</h2><p>This changes only the local demonstration calendar. It does not book a LingoAce class or update Google Calendar.</p><pre id="approval-payload"></pre><label class="check"><input type="checkbox" id="approve-check"> I approve this exact action.</label><div class="dialog-actions"><button class="secondary" id="try-blocked">Test execution without approval</button><button class="primary" id="approve-execute" disabled>Approve & apply locally</button></div><p id="approval-status" role="status"></p><p class="muted">Approval expires after 10 minutes and can be used once.</p></dialog>
+</body></html>

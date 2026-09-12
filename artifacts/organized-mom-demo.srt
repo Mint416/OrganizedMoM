@@ -1,0 +1,523 @@
+1
+00:00:00,000 --> 00:00:05,978
+This is The Organized Mom, a family personal assistant developed from Min
+Tao's six module project plans.
+
+2
+00:00:05,978 --> 00:00:09,143
+This walkthrough shows screenshots captured from the working application.
+
+3
+00:00:09,143 --> 00:00:10,901
+All family records are synthetic.
+
+4
+00:00:10,901 --> 00:00:17,583
+The default demonstration uses deterministic specialist roles and does not
+call a language model or connect to real accounts.
+
+5
+00:00:17,583 --> 00:00:26,374
+The problem is familiar: a schedule change arrives in one app, a class
+reminder arrives in another, and somehow a parent becomes the integration
+layer.
+
+6
+00:00:26,374 --> 00:00:28,836
+I wanted to reduce that mental work.
+
+7
+00:00:28,836 --> 00:00:34,814
+The application separates six responsibilities: coordination, information
+retrieval, weekly planning, independent criticism, longer-term student
+planning, and reflection.
+
+8
+00:00:34,814 --> 00:00:42,550
+These roles exchange structured case records, so I can see where an
+assumption entered the workflow and which check still needs attention.
+
+9
+00:00:43,750 --> 00:00:46,426
+The example replays Thursday, August thirteenth, twenty twenty-six.
+
+10
+00:00:46,426 --> 00:00:49,771
+The source view preserves the original soccer notice as superseded.
+
+11
+00:00:49,771 --> 00:00:54,120
+The current BYGA update moves practice to five thirty through seven P M.
+
+12
+00:00:54,120 --> 00:00:57,130
+LingoAce still shows Chinese class from six to seven.
+
+13
+00:00:57,130 --> 00:01:00,141
+Each record retains its identity, revision, and retrieval time.
+
+14
+00:01:00,141 --> 00:01:05,158
+Keeping both versions matters because the older message can still look
+relevant in a search.
+
+15
+00:01:05,158 --> 00:01:07,834
+Relevance alone does not make a record authoritative.
+
+16
+00:01:07,834 --> 00:01:12,517
+The event identifier connects the versions, while revision and status
+determine which notice applies.
+
+17
+00:01:12,517 --> 00:01:15,862
+The source view also shows the affected child and location.
+
+18
+00:01:15,862 --> 00:01:21,883
+If those details are unclear, the assistant needs clarification before
+treating the event as a reliable scheduling fact.
+
+19
+00:01:23,083 --> 00:01:27,138
+The Information Agent ranks three records using text vectors and latent
+semantic retrieval.
+
+20
+00:01:27,138 --> 00:01:30,256
+Current-record validation excludes the old notice from the active schedule.
+
+21
+00:01:30,256 --> 00:01:33,687
+Deterministic time checks find a sixty-minute overlap for the same child.
+
+22
+00:01:33,687 --> 00:01:37,118
+The response cites the records and saves an observable case trace.
+
+23
+00:01:37,118 --> 00:01:39,613
+A missing source would keep this check pending.
+
+24
+00:01:39,613 --> 00:01:41,796
+Retrieval and conflict detection do different jobs.
+
+25
+00:01:41,796 --> 00:01:43,979
+Retrieval finds useful evidence for the question.
+
+26
+00:01:43,979 --> 00:01:48,969
+The scheduling check compares actual dates and times across the current
+records in the loaded dataset.
+
+27
+00:01:48,969 --> 00:01:53,335
+It does not rely on a language model to estimate whether two intervals
+overlap.
+
+28
+00:01:53,335 --> 00:01:56,142
+Here, both activities include six to seven P M.
+
+29
+00:01:56,142 --> 00:02:00,508
+Showing that evidence makes the answer easy for a parent to inspect and
+correct.
+
+30
+00:02:01,708 --> 00:02:03,775
+The Planning Agent compares structured alternatives.
+
+31
+00:02:03,775 --> 00:02:09,285
+A separate Schedule Critic checks evidence, group commitments, and the
+assumed thirty-minute travel buffer before scoring.
+
+32
+00:02:09,285 --> 00:02:14,796
+The confirmed Friday Chinese make-up resolves the example conflict and
+scores ninety-seven out of one hundred.
+
+33
+00:02:14,796 --> 00:02:17,895
+The search has explicit branching, depth, and time limits.
+
+34
+00:02:17,895 --> 00:02:20,306
+Unsupported options remain pending or are rejected.
+
+35
+00:02:20,306 --> 00:02:27,539
+The planner can generate up to four alternatives at a node, retain three
+states, and search to a depth of three.
+
+36
+00:02:27,539 --> 00:02:30,294
+It also limits expansion count and search time.
+
+37
+00:02:30,294 --> 00:02:34,771
+Those boundaries keep a difficult scheduling question from turning into an
+endless search.
+
+38
+00:02:34,771 --> 00:02:38,904
+The critic considers feasibility, current evidence, protected commitments,
+disruption, transportation, and clarity.
+
+39
+00:02:38,904 --> 00:02:43,726
+The thirty-minute travel allowance is a conservative prototype assumption,
+not a live traffic estimate.
+
+40
+00:02:43,726 --> 00:02:49,925
+A make-up slot must appear in the evidence before the planner can treat it
+as an available solution.
+
+41
+00:02:51,125 --> 00:02:54,153
+Here I tried to execute the proposed change without approval.
+
+42
+00:02:54,153 --> 00:02:55,364
+The application rejected it.
+
+43
+00:02:55,364 --> 00:02:58,694
+An approval covers the exact action and expires after ten minutes.
+
+44
+00:02:58,694 --> 00:03:02,932
+The server also rejects a changed payload, changed source evidence, or a
+reused approval.
+
+45
+00:03:02,932 --> 00:03:06,263
+Model commentary and instructions inside a notice cannot grant this
+permission.
+
+46
+00:03:06,263 --> 00:03:09,290
+This is more than a confirmation message on a screen.
+
+47
+00:03:09,290 --> 00:03:12,318
+The server enforces the rule where the effect would happen.
+
+48
+00:03:12,318 --> 00:03:17,162
+A recommendation can be useful without giving the assistant permission to
+commit the family to it.
+
+49
+00:03:17,162 --> 00:03:19,584
+The preview names the event and proposed times.
+
+50
+00:03:19,584 --> 00:03:23,520
+If the underlying schedule changes before execution, the old approval no
+longer applies.
+
+51
+00:03:23,520 --> 00:03:27,758
+I have to review a fresh plan rather than unknowingly approve a stale one.
+
+52
+00:03:28,958 --> 00:03:36,578
+After I approve the exact action, the application writes the change to the
+local demonstration calendar and reads it back to verify success.
+
+53
+00:03:36,578 --> 00:03:39,559
+The approval and execution remain in the audit trail.
+
+54
+00:03:39,559 --> 00:03:43,535
+This demonstration does not book the LingoAce make-up or update Google
+Calendar.
+
+55
+00:03:43,535 --> 00:03:45,523
+The original provider records remain unchanged.
+
+56
+00:03:45,523 --> 00:03:49,498
+The distinction between a proposed change and a verified result is
+important.
+
+57
+00:03:49,498 --> 00:03:54,467
+A tool call might fail, return an unexpected response, or succeed without
+the interface noticing.
+
+58
+00:03:54,467 --> 00:03:59,105
+The local workflow records the effect and checks the saved state before
+reporting success.
+
+59
+00:03:59,105 --> 00:04:03,412
+In a future live integration, each provider will need its own equivalent
+verification.
+
+60
+00:04:03,412 --> 00:04:08,050
+Until that exists, the application describes this outcome explicitly as a
+local demonstration effect.
+
+61
+00:04:09,250 --> 00:04:12,006
+The simulated outbox creates a family follow-up task.
+
+62
+00:04:12,006 --> 00:04:14,761
+Repeating the notification does not send a duplicate.
+
+63
+00:04:14,761 --> 00:04:19,583
+I can acknowledge the task, mark it done, snooze it, or report a correction.
+
+64
+00:04:19,583 --> 00:04:21,650
+Completed feedback survives a browser reload.
+
+65
+00:04:21,650 --> 00:04:25,783
+The assistant uses persistent SQLite memory to carry this state between
+visits.
+
+66
+00:04:25,783 --> 00:04:29,572
+Memory is what makes the assistant useful beyond a single answer.
+
+67
+00:04:29,572 --> 00:04:34,050
+It records whether a task is pending, acknowledged, completed, snoozed,
+incorrect, or rescheduled.
+
+68
+00:04:34,050 --> 00:04:37,839
+A snoozed task can produce one reminder after the delay expires.
+
+69
+00:04:37,839 --> 00:04:40,250
+Completing a task stops that reminder path.
+
+70
+00:04:40,250 --> 00:04:41,972
+Quiet hours defer notifications overnight.
+
+71
+00:04:41,972 --> 00:04:49,550
+These controls matter because an assistant that repeatedly tells me what I
+already know would simply become one more thing to manage.
+
+72
+00:04:50,750 --> 00:04:52,231
+Now the LingoAce check fails.
+
+73
+00:04:52,231 --> 00:04:57,266
+The assistant reports that the check is incomplete, keeps the decision
+pending, and removes the notification action.
+
+74
+00:04:57,266 --> 00:05:01,412
+It does not turn unavailable information into a claim that the schedule is
+clear.
+
+75
+00:05:01,412 --> 00:05:04,077
+This failure scenario is part of the regression suite.
+
+76
+00:05:04,077 --> 00:05:08,520
+This is also how I approach a school notice that only contains a protected
+link.
+
+77
+00:05:08,520 --> 00:05:12,074
+Without authorized access to the details, the item has not been reviewed.
+
+78
+00:05:12,074 --> 00:05:16,220
+The assistant should not invent the missing date or assume that nothing
+needs doing.
+
+79
+00:05:16,220 --> 00:05:20,070
+The prototype includes separate scenarios for an unknown child and
+conflicting source records.
+
+80
+00:05:20,070 --> 00:05:24,217
+Each one returns an unresolved state that a parent can recognize and act on.
+
+81
+00:05:25,417 --> 00:05:28,061
+The tournament scenario demonstrates a hard family rule.
+
+82
+00:05:28,061 --> 00:05:31,366
+Skipping a soccer tournament requires a separate parent-provided illness
+decision.
+
+83
+00:05:31,366 --> 00:05:34,671
+The prototype never infers illness, so it rejects this branch.
+
+84
+00:05:34,671 --> 00:05:36,984
+A numerical score cannot override the rule.
+
+85
+00:05:36,984 --> 00:05:38,967
+Unresolved choices return to the parent.
+
+86
+00:05:38,967 --> 00:05:42,603
+Family priorities are not always reducible to a convenient numerical score.
+
+87
+00:05:42,603 --> 00:05:45,577
+Group activities and commitments without make-up options deserve protection.
+
+88
+00:05:45,577 --> 00:05:50,204
+Sometimes both commitments are important and the rules do not select a clear
+winner.
+
+89
+00:05:50,204 --> 00:05:52,848
+That is a legitimate stopping point for automation.
+
+90
+00:05:52,848 --> 00:05:58,467
+The assistant's job is to make the trade-off visible and give the parent
+enough context to decide.
+
+91
+00:05:59,667 --> 00:06:03,211
+The High School and College Advisor provides a four-year discussion
+template.
+
+92
+00:06:03,211 --> 00:06:07,401
+It keeps school-specific requirements and dates unverified until current
+official sources are supplied.
+
+93
+00:06:07,401 --> 00:06:09,334
+Parent and student review are required.
+
+94
+00:06:09,334 --> 00:06:12,879
+The assistant does not predict admission or replace the school counselor.
+
+95
+00:06:12,879 --> 00:06:16,746
+This role works on a different time horizon from the weekly scheduler.
+
+96
+00:06:16,746 --> 00:06:22,868
+A ninth-grade discussion might begin with interests and course choices,
+while later years introduce campus research and application milestones.
+
+97
+00:06:22,868 --> 00:06:26,413
+Those are planning topics, not verified requirements for a particular
+school.
+
+98
+00:06:26,413 --> 00:06:29,313
+The student also needs a voice in the plan.
+
+99
+00:06:29,313 --> 00:06:35,758
+The assistant can organize questions for a counselor meeting without
+pretending to know what is best for the student's future.
+
+100
+00:06:36,958 --> 00:06:41,358
+The Reflection Agent summarizes saved cases, completed tasks, and verified
+local actions.
+
+101
+00:06:41,358 --> 00:06:45,758
+Forty-one automated tests pass, and the browser walkthrough checks the real
+interface.
+
+102
+00:06:45,758 --> 00:06:49,792
+These are small synthetic tests, not proof of live service reliability.
+
+103
+00:06:49,792 --> 00:06:54,192
+The GitHub-ready package includes the code, project plan, report, and
+reproduction scripts.
+
+104
+00:06:54,192 --> 00:06:59,325
+The next stage is an authorized pilot with real accounts and representative
+evaluation data.
+
+105
+00:06:59,325 --> 00:07:01,525
+The evaluation includes nine demonstration scenarios.
+
+106
+00:07:01,525 --> 00:07:08,492
+Five authored cases are used for the binary conflict calculation, with four
+detected conflicts and one correctly clear schedule.
+
+107
+00:07:08,492 --> 00:07:12,892
+That small result supports a regression check, not a broad accuracy claim.
+
+108
+00:07:12,892 --> 00:07:18,758
+The browser test also exercises approval, saved feedback, and the failure
+path through the actual interface.
+
+109
+00:07:18,758 --> 00:07:24,992
+Before personal use, I still need representative notice extraction tests,
+complete source synchronization, and live delivery checks.
+
+110
+00:07:24,992 --> 00:07:31,592
+The code and report make those remaining steps explicit so the next phase
+can build on measured behavior.
+
+111
+00:07:32,792 --> 00:07:36,987
+Just as I was finishing this project, Meta released Muse, its own personal
+AI agent.
+
+112
+00:07:36,987 --> 00:07:40,342
+Apparently, my capstone now has a competitor with a slightly bigger budget.
+
+113
+00:07:40,342 --> 00:07:42,020
+So much for my head start!
+
+114
+00:07:42,020 --> 00:07:47,893
+But the timing does make a point: mom or not, we could all use a little help
+with the mental juggling.
+
+115
+00:07:47,893 --> 00:07:55,724
+A good personal assistant should help us feel more organized and less
+overwhelmed, so we can give our limited attention to the people and
+experiences that matter most.
+
+116
+00:07:55,724 --> 00:07:58,800
+And maybe, just once, drink our coffee while it's still hot.

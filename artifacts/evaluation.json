@@ -1,0 +1,121 @@
+{
+  "generated_at": "2026-09-07T23:12:22.151910+00:00",
+  "mode": "deterministic_synthetic",
+  "tests": {
+    "run": 41,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  "scenarios": [
+    {
+      "scenario": "schedule_change",
+      "status": "needs_review",
+      "conflicts": 1,
+      "source_ids": [
+        "BYGA-101",
+        "LINGO-201"
+      ],
+      "elapsed_ms": 1.13
+    },
+    {
+      "scenario": "source_failure",
+      "status": "blocked",
+      "conflicts": 0,
+      "source_ids": [
+        "BYGA-101"
+      ],
+      "elapsed_ms": 1.03
+    },
+    {
+      "scenario": "tournament",
+      "status": "needs_review",
+      "conflicts": 1,
+      "source_ids": [
+        "BYGA-101",
+        "LINGO-201"
+      ],
+      "elapsed_ms": 1.34
+    },
+    {
+      "scenario": "ambiguous_child",
+      "status": "blocked",
+      "conflicts": 0,
+      "source_ids": [
+        "BYGA-101"
+      ],
+      "elapsed_ms": 1.07
+    },
+    {
+      "scenario": "transportation",
+      "status": "needs_review",
+      "conflicts": 1,
+      "source_ids": [
+        "BYGA-101",
+        "LINGO-201"
+      ],
+      "elapsed_ms": 1.22
+    },
+    {
+      "scenario": "routine",
+      "status": "clear",
+      "conflicts": 0,
+      "source_ids": [
+        "STUDY-301"
+      ],
+      "elapsed_ms": 0.79
+    },
+    {
+      "scenario": "college",
+      "status": "needs_review",
+      "conflicts": 0,
+      "source_ids": [
+        "PLAN-401"
+      ],
+      "elapsed_ms": 0.82
+    },
+    {
+      "scenario": "source_disagreement",
+      "status": "blocked",
+      "conflicts": 0,
+      "source_ids": [
+        "LINGO-201"
+      ],
+      "elapsed_ms": 1.14
+    },
+    {
+      "scenario": "prompt_injection",
+      "status": "needs_review",
+      "conflicts": 1,
+      "source_ids": [
+        "BYGA-101",
+        "LINGO-201"
+      ],
+      "elapsed_ms": 1.35
+    }
+  ],
+  "conflict_evaluation": {
+    "sample_size": 5,
+    "tp": 4,
+    "fp": 0,
+    "fn": 0,
+    "tn": 1,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "latency": {
+    "samples_per_path": 20,
+    "simple_median_ms": 0.685,
+    "planning_median_ms": 1.11,
+    "includes_network_or_llm": false
+  },
+  "unmeasured": [
+    "Free-form notice extraction accuracy",
+    "Live Google synchronization completeness",
+    "Real Telegram delivery rate",
+    "Real-world conflict precision and recall",
+    "LLM latency and factuality",
+    "Production fallback success rate"
+  ],
+  "interpretation": "Small authored fixtures and unit tests establish regression behavior only. Do not present their percentages as production reliability."
+}

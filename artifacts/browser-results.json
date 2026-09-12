@@ -1,0 +1,29 @@
+{
+  "mode": "fresh browser, temporary synthetic database",
+  "checks": [
+    "Current sources produce a 60-minute overlap",
+    "Unapproved execution rejected through the actual UI",
+    "Exact approved local write executed and verified",
+    "Feedback persisted after browser reload",
+    "Reflection includes the verified local action",
+    "Failed source stays pending and hides notification action",
+    "Tournament-skipping branch displays its hard-rule rejection",
+    "390-pixel mobile layout has no horizontal overflow"
+  ],
+  "screenshots": [
+    "artifacts/screenshots/01-overview.png",
+    "artifacts/screenshots/02-sources.png",
+    "artifacts/screenshots/03-conflict.png",
+    "artifacts/screenshots/04-planning.png",
+    "artifacts/screenshots/05-approval-blocked.png",
+    "artifacts/screenshots/06-memory.png",
+    "artifacts/screenshots/06a-calendar-verified.png",
+    "artifacts/screenshots/07-reflection.png",
+    "artifacts/screenshots/08-source-failure.png",
+    "artifacts/screenshots/09-tournament-rule.png",
+    "artifacts/screenshots/10-college-review.png",
+    "artifacts/screenshots/11-mobile.png"
+  ],
+  "javascript_errors": [],
+  "passed": true
+}
